@@ -22,7 +22,7 @@ public class AddFileHeadComment : UnityEditor.AssetModificationProcessor
 
         string realPath = Application.dataPath.Replace("Assets", "") + newFilePath;
         string scriptContent = File.ReadAllText(realPath);
-
+        
         // 获取信息设置注释
         scriptContent = scriptContent.Replace("#SCRIPTFULLNAME#", Path.GetFileName(newFilePath));
         scriptContent = scriptContent.Replace("#COMPANY#", PlayerSettings.companyName);
